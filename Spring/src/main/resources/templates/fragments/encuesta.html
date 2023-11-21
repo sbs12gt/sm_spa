@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<title th:text="${titulo}"></title>
+</head>
+<body>
+	<section th:replace="fragments/header :: header"></section>
+	<section>
+	<div class="container pt-5 pb-5">
+		<h1 class="card bg-success text-white text-center mb-3 titulo_inputs"  th:text="${titulo}"></h1>
+		<!----------------------------------------------->
+		<div class="card">
+			<form th:action="@{/encuesta}" method="post">
+				<div class="card-header">
+					<strong>¿Cómo calificaría la atención?</strong>
+				</div>
+				<div class="card-body">
+					<fieldset>
+                        <input type="radio" name="atencion" id="excel"> <label for="excel">😀 Excelente</label><br>
+                        <input type="radio" name="atencion" id="contento"> <label for="contento">🙂 Contento</label><br>
+                        <input type="radio" name="atencion" id="neutral"> <label for="neutral">😐 Neutral</label><br>
+                        <input type="radio" name="atencion" id="enfandado"> <label for="enfandado">😠 Enfandado</label>
+                    </fieldset>
+				</div>
+				<div class="card-header">
+					<strong>¿Cómo calificaría el ambiente?</strong>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-4">
+							<label>Instalaciones</label><br>
+							<fieldset>
+                                <input type="radio" name="instalacion" id="i1"> <label for="i1">⭐</label><br>
+                                <input type="radio" name="instalacion" id="i2"> <label for="i2">⭐⭐</label><br>
+                                <input type="radio" name="instalacion" id="i3"> <label for="i3">⭐⭐⭐</label><br>
+                                <input type="radio" name="instalacion" id="i4"> <label for="i4">⭐⭐⭐⭐</label><br>
+                                <input type="radio" name="instalacion" id="i5"> <label for="i5">⭐⭐⭐⭐⭐</label>
+                            </fieldset>
+						</div>
+						<div class="col-md-8">
+							<label>Comodidad</label><br>
+							<fieldset>
+                                <input type="radio" name="comodidad" id="c1"> <label for="c1">⭐</label><br>
+                                <input type="radio" name="comodidad" id="c2"> <label for="c2">⭐⭐</label><br>
+                                <input type="radio" name="comodidad" id="c3"> <label for="c3">⭐⭐⭐</label><br>
+                                <input type="radio" name="comodidad" id="c4"> <label for="c4">⭐⭐⭐⭐</label><br>
+                                <input type="radio" name="comodidad" id="c5"> <label for="c5">⭐⭐⭐⭐⭐</label>
+                            </fieldset>
+						</div>
+					</div>
+				</div>
+				<!----------------------------------------------->
+				<div class="card-header">
+					<strong>¿Nos recomendaría?</strong>
+				</div>	
+				<div class="card-body">
+					<fieldset>
+                        <input type="radio" name="recomendacion" id="si"> <label for="si">👍</label><br>
+                        <input type="radio" name="recomendacion" id="no"> <label for="no">👎</label>
+                    </fieldset>
+				</div>
+				<!----------------------------------------------->
+				<div class="card-header">
+					<strong>¿Porqué?</strong>
+				</div>
+				<div class="card-body">
+					<textarea class="form-control" style="max-height: 100px; min-height: 200px;" placeholder="Mensaje"></textarea>
+				</div>
+				<!----------------------------------------------->
+				<div class="card-header">
+					<strong>¿Qué servicio te gustaría que implementemos?</strong>
+				</div>
+				<div class="card-body">
+					<label><input type="checkbox"> Baños de hipertermia</label><br> 
+					<label><input type="checkbox"> Piscina</label><br> 
+					<label><input type="checkbox"> Otros</label>
+				</div>
+				<!----------------------------------------------->	
+				<div class="card-header">
+					<strong>Sugiera otros servicios</strong>
+				</div>	
+				<div class="card-body">
+					<input type="text" class="form-control" placeholder="Escribe aquí">
+				</div>
+				<!----------------------------------------------->
+				<div class="card-header">
+					<strong>Tus datos</strong>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Nombre">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Teléfono">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="E-mail">
+					</div>
+					<button type="submit" class="btn btn-success form-control">Confirmar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	</section>
+	<section th:replace="fragments/footer :: footer"></section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Alex Brush';
+    src: url(../fonts/AlexBrush-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url(../fonts/DMSerifDisplay-Regular.ttf);
+}
+
+.izquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.subtitulos {
+    font-family: 'DM Serif Display';
+    color: #005256;   
+}
+
+.bg_verde {
+    color: #005256;
+}
+
+.espaciado_principal {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.subtitulo_informacion {
+    font-family: 'DM Serif Display';
+}
+.MyV {
+    font-family: 'Alex Brush';
+    font-size: 25px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .titulo_inputs {
+        font-size: 25px;
+    }
+
+}
