@@ -1,0 +1,54 @@
+.relativo {
+	position: relative;
+	z-index: 1;
+}
+
+.relativo img {
+	object-fit: none;
+}
+
+.absoluto {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	top: 10%;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.cuadrado {
+	width: 80%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.cuadrado .col-xl {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cuadrado a {
+	color: #fff !important;
+	margin: 5px;
+	width: 200px;
+}
+
+@media screen and (max-width: 1199px) {
+
+    .cuadrado img {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 967px) {
+
+    .cuadrado a {
+        display: none;
+    }
+
+}

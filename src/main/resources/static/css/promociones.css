@@ -1,0 +1,35 @@
+.Promociones .relativo {
+  position: relative;
+  z-index: 1;
+}
+
+.Promociones .absoluto {
+	position: absolute;
+	bottom: 33%;
+	left: 5%;
+	width: 100%;
+	z-index: 2;
+}
+
+.Promociones .absoluto input {
+	width: 40%;
+}
+
+.carrusel_circulo {
+	width: 35%;
+	height: 500px;
+	border-radius: 50%;
+	background: #000;
+}
+
+.modal_grande {
+	max-width: 1000px !important;
+}
+
+@media screen and (max-width: 991px) {
+	
+	.Promociones .absoluto input {
+		display: none;
+	}
+	
+}

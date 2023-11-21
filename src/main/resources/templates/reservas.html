@@ -1,0 +1,42 @@
+<!DOCTYPE html>	
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+    <title th:text="${titulo}"></title>
+    <style type="text/css">	
+        .fuente-formulario{
+			font-family: "Roboto",sans-serif;	
+		}		
+		.border-form{
+			color: #005256;
+			border: solid;			
+		}		
+    </style>
+</head>
+<body>
+	<section th:replace="fragments/header :: header"></section>
+	<div class="container text-center p-5 my-5 border-form">
+		<h1 class="subtitulos">HACER UNA RESERVA</h1>
+		<p class="subtitulo_informacion">Nuestros clientes son importantes para nosotros, por eso capacitamos continuamente a nuestros terapeutas para asegurarnos de que todos los tratamientos sean del más alto nivel y que cada cliente reciba la mejor atención.</p>
+		<form action="" class="fuente-formulario">			
+			<input class="form-control mb-2" placeholder="Ingrese su nombre">
+			<input class="form-control mb-2" placeholder="Ingrese su correo electrónico">
+			<textarea  class="form-control mb-2" rows="5" placeholder="Ingrese su mensaje"></textarea>
+			<a th:href="@{/pasarelas}" class="btn btn-success">Procesar Pago</a>
+		</form>
+	</div>
+	<section th:replace="fragments/footer :: footer"></section>
+</body>
+</html>

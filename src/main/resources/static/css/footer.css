@@ -1,0 +1,57 @@
+.Pierna {
+	background-color: #005256;
+    color: #dedede;
+}
+
+.Pie {
+    padding-top: 16px;
+}
+
+.Pie .sep {
+    border-right: 1px solid rgb(233, 236, 239, 0.2);
+}
+
+.Pierna hr {
+    border-top: 1px solid rgb(233, 236, 239, 0.2);
+}
+
+.Pie .columna {
+    display: flex;
+    justify-content: center;
+}
+
+.Pie .columna h6 {
+    font-family: 'Alex Brush';
+    font-size: 25px;
+}
+
+.Pie .columna li {
+    list-style: none;
+}
+
+.Pie .columna ul {
+    padding-left: 20px;
+}
+
+.Pierna .derechos {
+    padding-right: 50px;
+    padding-bottom: 16px;
+}
+
+@media screen and (max-width: 991px) {
+  
+    .Pie .sep {
+        border-right: none;
+    }
+
+    .Pie .columna {
+        display: flex;
+        justify-content: start;
+    }
+
+    .Pierna .derechos {
+        padding-right: 10px;
+        padding-bottom: 16px;
+    }
+
+}
